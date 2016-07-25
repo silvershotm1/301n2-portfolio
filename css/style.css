@@ -1,0 +1,46 @@
+/*START OF CSS*/
+
+/*SELECTOR SECTION*/
+
+*{
+
+}
+
+html{
+
+}
+
+body {
+
+}
+
+
+main{
+
+}
+
+address {
+
+}
+
+hr {
+
+}
+
+footer {
+
+}
+
+hr {
+
+}
+ul li {
+  list-style: none;
+}
+
+/*CLASSES SECTION*/
+
+.header {
+  background-color: #305C6B;
+  width: 20%;
+}
