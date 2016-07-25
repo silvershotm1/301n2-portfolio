@@ -3,44 +3,77 @@
   <head>
     <meta charset="UTF-8">
     <title>My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/css/style.css">
     <link rel="styesheet" href="vendor/style/normalize.css">
+    <link rel="stylesheet" href="styles/fonts/icons.css">
   </head>
   <body>
-    <main>
-        <header>
+        <header class="site-header">
           <h1 class="header">
             Bishop's Blog!
           </h1>
           <p>The shocking power of static pages</p>
         </header>
-        <nav>
+        <nav class="main-nav" id="display">
+          <div class="icon-menu"></div>
           <ul>
-            <li class="tab" data-content="articles"><a href="#"> Home</a></li>
-            <li class="tab" data-content="about"><a href="#"> About Me</a></li>
-            <li><a href="http://facebook.com/silvershotm1" target="_blank"> Facebook</a></li>
+            <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
+            <li class="tab" data-content="about"><a href="#" class="icon-home3"> About Me</a></li>
+            <li><a href="http://facebook.com/silvershotm1" target=> Facebook</a></li>
             <li><a href="http://github.com/silvershotm1" target="_blank"> GitHub</a></li>
           </ul>
         </nav>
+        <main>
         <section id="projects" class="tab-content">
-          <article class="template" data-category="cat">
+          <div>
+            <ul id="filters">
+              <li>
+                <select id="coder-filter">
+                  <option value="">-- Filter by Coders --</option>
+                </select>
+              </li>
+              <li>
+                <select id="category-filter">
+                  <option value="">-- Filter by Categories --</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <article class="template template" data-category="cat">
             <header>
               <h2>Title</h2>
               <div class="byline">
-                Created By: <address><a href=""> Name</a></address>
+                Created By: <address><a href=""> Coder Name</a></address>
                 published <time pubdate datetime="2000-01-01">Publish Time</time>
               </div>
             </header>
             <section class="project-body"></section>
+            <a href="#" class="read-on">Read on &rarr;</a>
           </article>
         </section>
-
         <section id="about" class="tab-content">
-    </main>
-    <footer>
-    </footer>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="js/projectDetail.js"></script>
-    <script src="js/project.js"></script>
+          <header>
+            Other Things About Me
+          </header>
+          <section>
+            <h1>Some of my Interests:</h1>
+            <ul>
+              <li>Coding</li>
+              <li>Working on my Car</li>
+              <li>Building Computers</li>
+              <li>Hanging with my Family</li>
+            </ul>
+          </section>
+        </section>
+      </main>
+      <footer>
+        &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+      </footer>
+
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="js/projectDetail.js" type="text/javascript"></script>
+    <script src="js/project.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
   </body>
 </html>
