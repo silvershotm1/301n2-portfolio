@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+
+      <!-- HANDLEBARS TEMPLATE SCRIPT -->
+    <script id="article-template" type="text/x-handlebars-template">
+    <!-- LEFT OFF HERE****   -->
+    <article data-coder="{{coder}}" data-category="{{category}}">
+      <div>
+        <h2>{{coder}}</h2>
+          <div class="byline">
+            Created By: <address><a href="">{{coder}}</a></address>
+            published <time pubdate datetime="2000-01-01">{{publishStatus}}</time>  <!--calling assignment of days ago and publish date -->
+          </div>
+      </div>
+      <section class="project-body">{{{body}}}</section>
+      <a href="#" class="read-on">More &rarr;</a>
+    <hr>
+    </article>
+    </script>
   </head>
   <body>
         <header class="site-header clearfix">
@@ -48,20 +65,7 @@
               </li>
             </ul>
           </div>
-          <script id="article-template" type="text/x-handlebars-template">
-          <!-- LEFT OFF HERE****   -->
-          <article data-coder="{{coder}}" data-category="{{category}}"
-            <div>
-              <h2>{{coder}}</h2>
-                <div class="byline">
-                  Created By: <address><a href="">{{coderURL}}</a></address>
-                  published <time pubdate datetime="2000-01-01">{{publishStatus}}</time>  <!--calling assignment of days ago and publish date -->
-                </div>
-            </div>
-            <section class="project-body">{{body}}</section>
-            <a href="#" class="read-on">More &rarr;</a>
-          <hr>  
-          </article>
+
         </section>
         <section id="about" class="tab-content">
           <h2>Michael Bishop</h2>
