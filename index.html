@@ -48,16 +48,19 @@
               </li>
             </ul>
           </div>
-          <article class="template template" data-category="cat">
+          <script id="article-template" type="text/x-handlebars-template">
+          <!-- LEFT OFF HERE****   -->
+          <article data-coder="{{coder}}" data-category="{{category}}"
             <div>
-              <h2>Title</h2>
+              <h2>{{coder}}</h2>
                 <div class="byline">
-                  Created By: <address><a href=""> Coder Name</a></address>
-                  published <time pubdate datetime="2000-01-01">Publish Time</time>
+                  Created By: <address><a href="">{{coderURL}}</a></address>
+                  published <time pubdate datetime="2000-01-01">{{publishStatus}}</time>  <!--calling assignment of days ago and publish date -->
                 </div>
             </div>
-            <section class="project-body"></section>
+            <section class="project-body">{{body}}</section>
             <a href="#" class="read-on">More &rarr;</a>
+          <hr>  
           </article>
         </section>
         <section id="about" class="tab-content">
@@ -77,11 +80,7 @@
         <footer class="site-footer">
           &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
         </footer>
-
-        <section id="about" class="tab-content">
-    </main>
-    <footer>
-    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="js/projectDetail.js"></script>
   <script src="js/project.js"></script>
