@@ -1,0 +1,62 @@
+/*  HTML ARCHITECTURE
+======================================================= */
+
+* {         /* Testing to see boxes around all elements */
+
+}
+html {}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #313131;
+  background: black;
+}
+
+hr {
+  margin: 1em;
+  width: 80%;
+  clear: both;
+}
+
+footer {
+  color: silver;
+  height: 3em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*  TEXT STYLING
+======================================================= */
+address {
+  display: inline-block;
+}
+
+p {
+  font-size: 1em;
+}
+
+/*LINK STYLES
+======================================================== */
+
+a, a:link, a:active {
+  text-decoration: none;
+  color: #282E30;
+}
+
+a:hover, a:focus {
+  color: #29506D;
+  background: silver;
+}
+
+a:visited {
+  /*color: purple;  COLOR CHANGE HERE AFFECTS ALL LINKS, EVEN IF NOT VISITED*/
+}
+
+/*IMAGGE STYLES
+======================================================== */
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}

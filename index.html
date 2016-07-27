@@ -34,6 +34,80 @@
             <section class="project-body"></section>
           </article>
         </section>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="styesheet" href="vendor/style/normalize.css">
+    <link rel="stylesheet" href="styles/fonts/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+  </head>
+  <body>
+        <header class="site-header clearfix">
+          <div class="header-navi">
+            <section class="heading-group-h1">
+              <h1>
+                Bishop's Blog!
+              </h1>
+                <p>Welcome to the blog of Michael Bishop!</p>
+            </section>
+            <img src="imgs/me3.jpg">
+          </div>
+          <nav class="main-nav" id="display">
+            <div class="icon-menu"></div>
+              <ul>
+                <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
+                <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About Me</a></li>
+                <li class="tab" data-content="resume"><a href="#" class="icon-power"> Resume</a></li>
+                <li><a href="https://www.linkedin.com/in/michael-bishop-b72b64111" target="_blank" class="icon-link"> LinkedIN</a></li>
+                <li><a href="http://github.com/silvershotm1" target="_blank" class="icon-github"> GitHub</a></li>
+              </ul>
+          </nav>
+        </header>
+        <main>
+        <section id="projects" class="tab-content">
+          <div>
+            <ul id="filters">
+              <li>
+                <select id="coder-filter">
+                  <option value="">-- Filter by Coders --</option>
+                </select>
+              </li>
+              <li>
+                <select id="category-filter">
+                  <option value="">-- Filter by Categories --</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+          <article class="template template" data-category="cat">
+            <div>
+              <h2>Title</h2>
+                <div class="byline">
+                  Created By: <address><a href=""> Coder Name</a></address>
+                  published <time pubdate datetime="2000-01-01">Publish Time</time>
+                </div>
+            </div>
+            <section class="project-body"></section>
+            <a href="#" class="read-on">More &rarr;</a>
+          </article>
+        </section>
+        <section id="about" class="tab-content">
+          <h2>Michael Bishop</h2>
+          <h4>Web Developer</h4>
+          <section>
+            <h4>Some of my Interests:</h4>
+              <ul>
+                <li>Coding</li>
+                <li>Working on my Car</li>
+                <li>Building Computers</li>
+                <li>Hanging with my Family</li>
+              </ul>
+          </section>
+        </section>
+        </main>
+        <footer class="site-footer">
+          &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+        </footer>
 
         <section id="about" class="tab-content">
     </main>
