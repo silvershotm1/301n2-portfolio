@@ -68,6 +68,20 @@ $('nav a').on('click', function() {
 });
 =======
 projectView.toggleNavDisplay = function() {
+<<<<<<< Updated upstream
+=======
+
+  var $counter = 0;
+  $('.icon-menu').on('click',function() {
+    if ($counter % 2 === 0) {
+      $('.main-nav ul').show();
+    } else {
+      $('.main-nav ul').hide();
+    }
+    $counter ++;
+  });
+};
+>>>>>>> Stashed changes
 
   var $counter = 0;
   $('.icon-menu').on('click',function() {
