@@ -50,7 +50,7 @@ a:hover, a:focus {
 }
 
 a:visited {
-  /*color: purple;  COLOR CHANGE HERE AFFECTS ALL LINKS, EVEN IF NOT VISITED*/
+  /*color: purple;  /*COLOR CHANGE HERE AFFECTS ALL LINKS, EVEN IF NOT VISITED*/
 }
 
 /*IMAGGE STYLES

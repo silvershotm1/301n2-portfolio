@@ -1,18 +1,12 @@
-// START JS CODE
+var projectView = {};
 
-<<<<<<< Updated upstream
-
-//DOM--READY FUNCTION
-$(function() {
-  $('.tab-content').hide();
-});
-=======
 projectView.populateFilters = function() {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       var val = $(this).find('address a').text();
       var optionTag = '<option value="' + val + '">' + val + '</option>';
       if ($('#coder-filter option[value="' + val + '"]').length === 0) {
+
         $('#coder-filter').append(optionTag);
       }
 
@@ -30,6 +24,7 @@ projectView.handleCoderFilter = function() {
     if ($(this).val()) {
       $('article').hide();
       $('article[data-coder="' + $(this).val() + '"]').fadeIn();
+    } else {
       $('article').fadeIn();
       $('article.template').hide();
     }
@@ -41,7 +36,7 @@ projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      $('article[data-category="' + $(this).val() + '"]').fadeIn('slow');
+      $('article[data-category="' + $(this).val() + '"]').fadeIn();
     } else {
       $('article').fadeIn();
       $('article.template').hide();
@@ -55,21 +50,11 @@ projectView.handleMainNav = function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
   });
->>>>>>> Stashed changes
 
-// Navigation Handler Function
+  $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
+};
 
-<<<<<<< Updated upstream
-$('nav a').on('click', function() {
-  var $navDirection = $(this).data('tab'); //gives us 'delegation' or 'attributes'
-  $('.tab-content').hide();
-  //we want $('#delegation')
-  $('#' + $navDirection).fadeIn(750);
-});
-=======
 projectView.toggleNavDisplay = function() {
-<<<<<<< Updated upstream
-=======
 
   var $counter = 0;
   $('.icon-menu').on('click',function() {
@@ -81,28 +66,17 @@ projectView.toggleNavDisplay = function() {
     $counter ++;
   });
 };
->>>>>>> Stashed changes
 
-  var $counter = 0;
-  $('.icon-menu').on('click',function() {
-    if ($counter % 2 === 0) {
-      $('.main-nav ul').show();
-    } else {
-      $('.main-nav ul').hide();
-    }
-    $counter ++;
+projectView.setTeasers = function() {
+  $('.project-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+
+  $('#projects').on('click', 'a.read-on', function(e) {
+    e.preventDefault();
+    $(this).parent().find('*').fadeIn();
+    $(this).hide();
   });
 };
->>>>>>> Stashed changes
 
-// LOG FUNCTION
-function logItem() {
-  console.log($(this));
-
-<<<<<<< Updated upstream
-  var $item = $(this).text();
-}
-=======
 $(document).ready(function() {
   projectView.populateFilters();
   projectView.handleCategoryFilter();
@@ -111,4 +85,3 @@ $(document).ready(function() {
   projectView.toggleNavDisplay();
   projectView.setTeasers();
 });
->>>>>>> Stashed changes
