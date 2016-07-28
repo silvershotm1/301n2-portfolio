@@ -14,9 +14,6 @@ Project.prototype.toHtml = function() {
   var source = $('#article-template').html();
   var template = Handlebars.compile(source);
 
-  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
-  this.publishStatus = this.publishedOn ? ' published ' + this.daysAgo + ' days ago ' : '(draft)';
-
 //   var $newProject = $('article.template').clone();
 //   $newProject.removeClass('template');
 //   if (!this.publishedOn) {
@@ -36,9 +33,10 @@ Project.prototype.toHtml = function() {
 //   return $newProject;
 //
 // };
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
   var Html = template(this);
-  // $('#articles').append(Html);  CODE Doesn't append
   return Html;
 };
 projectData.sort(function(a,b) {
