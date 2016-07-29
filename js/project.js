@@ -11,24 +11,33 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
-  var $newProject = $('article.template').clone();
-  $newProject.removeClass('template');
-  if (!this.publishedOn) {
-    $newArticle.addClass('draft');
-  }
+  var source = $('#article-template').html();
+  var template = Handlebars.compile(source);
 
-  $newProject.attr('data-category', this.category);
-  $newProject.attr('data-author', this.coder);
-  $newProject.find('.byline a').html(this.coder);
-  $newProject.find('.byline a').attr('href', this.coderURL);
-  $newProject.find('h2:first').html(this.title);
-  $newProject.find('.project-body').html(this.body);
-  $newProject.find('time[pubdate]').attr('datetime', this.publishedOn);
-  $newProject.find('time[pubdate]').attr('title', this.publishedOn);
-  $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago');
-  $newProject.append('<hr>');
-  return $newProject;
+//   var $newProject = $('article.template').clone();
+//   $newProject.removeClass('template');
+//   if (!this.publishedOn) {
+//     $newArticle.addClass('draft');
+//   }
+//
+//   $newProject.attr('data-category', this.category);
+//   $newProject.attr('data-coder', this.coder);
+//   $newProject.find('.byline a').html(this.coder);
+//   $newProject.find('.byline a').attr('href', this.coderURL);
+//   $newProject.find('h2:first').html(this.title);
+//   $newProject.find('.project-body').html(this.body);
+//   $newProject.find('time[pubdate]').attr('datetime', this.publishedOn);
+//   $newProject.find('time[pubdate]').attr('title', this.publishedOn);
+//   $newProject.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000) + ' days ago');
+//   $newProject.append('<hr>');
+//   return $newProject;
+//
+// };
+  this.daysAgo = parseInt((new Date() - new Date(this.publishedOn)) / 60 / 60 / 24 / 1000);
+  this.publishStatus = this.publishedOn ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
+  var Html = template(this);
+  return Html;
 };
 projectData.sort(function(a,b) {
   return (new Date(b.publishedOn)) - (new Date(a.publishedOn));

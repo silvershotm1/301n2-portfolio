@@ -1,0 +1,114 @@
+.site-header {
+background: #305C6B;
+}
+
+/*   Float the main header to the left, to make room for the hamburger menu. */
+.heading-group-h1 {
+float: left;
+padding: 0 0 .2em 1em;
+}
+
+/*LINK STYLES
+======================================================== */
+.icon-menu {
+float: right;
+font-size: 2em;
+}
+
+.main-nav {
+padding: 0.1em;
+display: block;
+}
+
+.main-nav ul {
+display: none;
+padding: 0;
+list-style: none;
+clear: both;
+}
+
+.main-nav li {
+margin-right: .4em;
+font-size: 1.5em;
+padding: .5em .2em;
+border-bottom: 1px  solid lightgrey;
+}
+
+.show-nav {
+display: block;
+}
+
+#filters {
+padding: 0;
+list-style: none;
+}
+
+/*#projects {
+background: #FFEAAA;
+}
+
+#about {
+background: #FFEAAA;
+}*/
+
+.tab-content {
+background: #FFEAAA;
+}
+
+.template {
+display: none;
+}
+
+.byline {
+color: black;
+}
+
+.byline a {
+font-weight: bold;
+text-decoration: none;
+}
+
+/*  MEDIA QUERY TO DISPLAY BIGGER SCREEN (NO HAMBURGER)
+======================================================== */
+/* MEDIA QUERIES FOR MULTIPLE DEVICES */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { /* Mobile*/
+  .main-nav ul {
+    display:none;
+
+  }
+  .header-navi img {
+    width: 25%;
+    height: 25%;
+  }
+}
+@media only screen and (min-device-width:481px) and (max-device-width:768px) {      /* Tablet */
+  .main-nav ul {
+    display: none;
+    /*padding: .1em .1em .1em 2em;*/
+    width: 80%;
+  }
+  /*.header-navi img {
+    width: 40%;
+    height: 40%;
+  }*/
+}
+@media only screen and (min-device-width:769px) and (max-device-width:1224px) {} /* Desktop */
+@media only screen and (min-width:680px) {    /* Bigger than 680 then Hide Menu */
+  .icon-menu {
+    display:none;
+  }
+
+  .main-nav ul {
+    display: flex;
+    justify-content: space-around;
+    columns: 5;
+    width: 100%;
+  }
+
+
+}
+
+
+#display {
+  display: block;
+}

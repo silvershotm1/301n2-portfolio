@@ -1,4 +1,3 @@
-// Configure a view object, to hold all our functions for dynamic updates and article-related event handlers.
 var projectView = {};
 
 projectView.populateFilters = function() {
@@ -6,7 +5,11 @@ projectView.populateFilters = function() {
     if (!$(this).hasClass('template')) {
       var val = $(this).find('address a').text();
       var optionTag = '<option value="' + val + '">' + val + '</option>';
-      $('#coder-filter').append(optionTag);
+      if ($('#coder-filter option[value="' + val + '"]').length === 0) {
+
+        $('#coder-filter').append(optionTag);
+      }
+
       val = $(this).attr('data-category');
       optionTag = '<option value="' + val + '">' + val + '</option>';
       if ($('#category-filter option[value="' + val + '"]').length === 0) {
@@ -16,11 +19,11 @@ projectView.populateFilters = function() {
   });
 };
 
-projectView.handleDevFilter = function() {
+projectView.handleCoderFilter = function() {
   $('#coder-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      $('article[data-coders="' + $(this).val() + '"]').fadeIn();
+      $('article[data-coder="' + $(this).val() + '"]').fadeIn();
     } else {
       $('article').fadeIn();
       $('article.template').hide();
@@ -33,10 +36,10 @@ projectView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
-      $('article[data-category="' + $(this).val() + '"]').fadeIn('slow');
+      $('article[data-category="' + $(this).val() + '"]').fadeIn();
     } else {
-      $('article').fadeIn('slow');
-      $('article.template').hide('fast');
+      $('article').fadeIn();
+      $('article.template').hide();
     }
     $('#coder-filter').val('');
   });
@@ -45,20 +48,28 @@ projectView.handleCategoryFilter = function() {
 projectView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function(e) {
     $('.tab-content').hide();
-    $('#' + $(this).data('content')).fadeIn('fast');
+    $('#' + $(this).data('content')).fadeIn();
   });
 
-  $('.main-nav .tab:first').click();
+  $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
 };
 
 projectView.toggleNavDisplay = function() {
-  $('.icon-menu').on('click', function(e) {
-    $('.main-nav ul').toggle();
+
+  var $counter = 0;
+  $('.icon-menu').on('click',function() {
+    if ($counter % 2 === 0) {
+      $('.main-nav ul').show();
+    } else {
+      $('.main-nav ul').hide();
+    }
+    $counter ++;
   });
 };
 
 projectView.setTeasers = function() {
-  $('.project-body *:nth-of-type(n+2)').hide();
+  $('.project-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+
   $('#projects').on('click', 'a.read-on', function(e) {
     e.preventDefault();
     $(this).parent().find('*').fadeIn();
@@ -69,7 +80,7 @@ projectView.setTeasers = function() {
 $(document).ready(function() {
   projectView.populateFilters();
   projectView.handleCategoryFilter();
-  projectView.handleDevFilter();
+  projectView.handleCoderFilter();
   projectView.handleMainNav();
   projectView.toggleNavDisplay();
   projectView.setTeasers();

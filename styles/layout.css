@@ -1,0 +1,81 @@
+.flex-box {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/*  SPAN STYLING
+======================================================= */
+.occ {
+  color:red;
+}
+
+.loc {
+  font-style: italic;
+}
+
+.listyle {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+ul + li {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.clearfix2::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.heading-group-h1 {
+  max-width: 80%;
+  color: #282E30;
+}
+.header-navi {
+  display: flex;
+  justify-content:space-between;
+}
+
+#filters select {
+  width: 90%;
+  margin: .2em 5%;
+}
+
+.site-footer {
+  background: #305C6B;
+}
+
+
+/* DONE: Add styles so the filters lay out better on desktop. */
+@media only screen and (min-width: 640px) {
+  .heading-group-h1 {
+    padding: .1em .1em .1em 2em;
+    float: none;
+  }
+
+  #filters select {
+    width: 15em;
+    margin: .2em .2em;
+  }
+
+  #filters li {
+    width: 20em;
+    display: inline;
+  }
+}
