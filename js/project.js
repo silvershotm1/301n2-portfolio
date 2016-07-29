@@ -11,6 +11,7 @@ function Project (opts) {
 }
 
 Project.prototype.toHtml = function() {
+  
   var source = $('#article-template').html();
   var template = Handlebars.compile(source);
 
