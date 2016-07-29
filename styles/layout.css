@@ -11,6 +11,26 @@
   float: right;
 }
 
+/*  SPAN STYLING
+======================================================= */
+.occ {
+  color:red;
+}
+
+.loc {
+  font-style: italic;
+}
+
+.listyle {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+ul + li {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .clearfix2::before {
   content: "";
   display: table;

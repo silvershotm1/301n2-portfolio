@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>My Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="styesheet" href="vendor/style/normalize.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/base.css">
@@ -11,81 +12,167 @@
     <link rel="stylesheet" href="styles/modules.css">
 
     <script id="article-template" type="text/x-handlebars-template">
-      <article data-category="{{category}}" data-author="{{coder}}">
-        <h1>{{coder}}</h1>
+      <article data-category="{{category}}" data-coder="{{coder}}">
+        <h1>{{title}}</h1>
         <div class="byline">
-          By <address><a href="">{{coder}}</a></address>
+          By <address><a href="{{coderURL}}">{{coder}}</a></address>
           <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
         </div>
       </div>
       <section class="project-body">{{{body}}}</section>
-      <a href="#" class="read-on">Read-on &rarr;</a>
+        <a href="#" class="read-on">More &rarr;</a>
       </article>
-      <hr>
+    <hr>
     </script>
   </head>
   <body>
-        <header class="site-header clearfix">
-          <div class="header-navi">
-            <section class="heading-group-h1">
-              <h1>
-                Bishop's Blog!
-              </h1>
-                <p>Welcome to the blog of Michael Bishop!</p>
-            </section>
-            <img src="imgs/me3.jpg">
-          </div>
-          <nav class="main-nav" id="display">
-            <div class="icon-menu"></div>
-              <ul>
-                <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
-                <li class="tab" data-content="about"><a href="#" class="icon-address-book"> About Me</a></li>
-                <li class="tab" data-content="resume"><a href="#" class="icon-power"> Resume</a></li>
-                <li><a href="https://www.linkedin.com/in/michael-bishop-b72b64111" target="_blank" class="icon-link"> LinkedIN</a></li>
-                <li><a href="http://github.com/silvershotm1" target="_blank" class="icon-github"> GitHub</a></li>
-              </ul>
-          </nav>
-        </header>
-        <main>
-        <section id="projects" class="tab-content">
-          <div>
-            <ul id="filters">
-              <li>
-                <select id="coder-filter">
-                  <option value="">-- Filter by Coders --</option>
-                </select>
-              </li>
-              <li>
-                <select id="category-filter">
-                  <option value="">-- Filter by Categories --</option>
-                </select>
-              </li>
+    <header class="site-header clearfix">
+      <div class="header-navi">
+        <section class="heading-group-h1">
+          <h1>
+            Bishop's Blog!
+          </h1>
+            <p>Welcome to the blog of Michael Bishop!</p>
+        </section>
+        <img src="imgs/me3.jpg">
+      </div>
+      <nav class="main-nav" id="display">
+        <div class="icon-menu"></div>
+        <ul>
+          <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="blog"><a href="#" class="icon-address-book"> Blog</a></li>
+          <li class="tab" data-content="resume"><a href="#" class="icon-power"> Resume</a></li>
+          <li><a href="https://www.linkedin.com/in/michael-bishop-b72b64111" target="_blank" class="icon-link"> LinkedIN</a></li>
+          <li><a href="http://github.com/silvershotm1" target="_blank" class="icon-github"> GitHub</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="projects" class="tab-content">
+        <div>
+          <ul id="filters">
+            <li>
+              <select id="coder-filter">
+                <option value="">-- Filter by Coders --</option>
+              </select>
+            </li>
+            <li>
+              <select id="category-filter">
+                <option value="">-- Filter by Categories --</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="blog" class="tab-content">
+        <h2>Michael Bishop</h2>
+        <h4>Javascript Full-Stack Web Developer</h4>
+        <section>
+          <h4>Some of my Interests:</h4>
+            <ul>
+              <li>Coding</li>
+              <li>Working on my Car</li>
+              <li>Building Computers</li>
+              <li>Hanging with my Family</li>
             </ul>
-          </div>
-        </section>
-        <section id="about" class="tab-content">
-          <h2>Michael Bishop</h2>
-          <h4>Web Developer</h4>
-          <section>
-            <h4>Some of my Interests:</h4>
-              <ul>
-                <li>Coding</li>
-                <li>Working on my Car</li>
-                <li>Building Computers</li>
-                <li>Hanging with my Family</li>
-              </ul>
           </section>
-        </section>
-        </main>
-        <footer class="site-footer">
-          &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
-        </footer>
+      </section>
+      <section id="resume" class="tab-content">
+        <hgroup>
+          <h2> Michael Bishop</h2>
+          <h4>(865)385-1326 &#0149;&#0149;&#0149; bishop.michaelr@gmail.com</h4>
+        </hgroup>
+        <hr>
+        <h3>Objective:</h3>
+        <div class="objective">
+          <p>A customer service professional with a passion for technology, enjoys learning new skills, able to effectively coordinate tasks to accomplish projects, resourceful and detail-oriented.</p>
+        </div>
+        <div class="skills">
+          <h3>Skills:</h3>
+            <ul>
+              <li><span class="listyle">Operating Systems</span></li>
+                <ul>
+                  <li> Windows, Mac OSX, Linux</li>
+                </ul>
+                  <li>Software</li>
+                <ul>
+                  <li> MS Office, Dreamweaver, Atom, Photoshop(some)</li>
+                </ul>
+              <li> Languages</li>
+                <ul>
+                  <li>HTML/CSS, Javascript</li>
+            </ul>
+        </div>
+        <div class="education">
+        <h3>Education:</h3>
+          <ul>
+            <li><span class="listyle">East Tennessee State University</span></li>
+            <li><span class="listyle">Bluegrass Technical College</span><span class="loc">  - Lexington, KY</span></li>
+              <ul>
+                <li>Associate of Science Degree (2012)</li>
+              </ul>
+            <li>Code Fellows Academy</li>
+              <ul>
+                <li><span class="occ">Student</span> // May 2016 - Present<span class="loc">  - Seattle, WA</li>
+                  <ul>
+                    <li>Completed Code 101</li>
+                    <li>Completed Code 201</li>
+                  </ul>
+              </ul>
+          </ul>
+        </div>
+        <div class="workexp">
+          <h3>Work Experience:</h3>
+            <ul>
+              <li class="listyle">Princess Cruise Lines</li>
+                <ul>
+                  <li><span class="occ">Reservation Agent</span> // Oct 2013 - April 2016 // Seattle, WA</li>
+                    <ul>
+                      <li>Work cross functionally to resolve customer issues.</li>
+                      <li>Troubleshoot system errors regarding payments and bookings.</li>
+                      <li>Deliver expert customer service to travel agents and customers.</li>
+                      <li>Partner with marketing teams to increase product knowledge.</li>
+                      <li>Drove initiative to improve process efficiency.</li>
+                    </ul>
+                </ul>
+                <li>Various Restaurants in Various Locations</li>
+                  <ul>
+                    <li><span class="occ">Chef & Line Cook</span> // Jan 2006 - Sept 2013 // TN, KY, and WA</li>
+                      <ul>
+                        <li>Managed inventory supply and procurement.</li>
+                        <li>Collaborated between internal resources and customers to ensure successful delivery of services in a fast pace environment.</li>
+                      </ul>
+                  </ul>
+                <li>Quality Recruiting and Consulting</li>
+                  <ul>
+                    <li><span class="occ">WebPage Designer & Recruiter</span> // Jan 2008 - Dec 2008 // Oak Ridge, TN</li>
+                      <ul>
+                        <li>Screened candidates for appropriate job openings.</li>
+                        <li>Built local database(non-server) for candidate information from online resources.</li>
+                        <li>Designed and maintained company website</li>
+                      </ul>
+                  </ul>
+                  <li>Client Logic</li>
+                    <ul>
+                      <li><span class="occ">Technical Support Rep</span> // Dec 2002 - Sept 2004 // Oak Ridge, TN</li>
+                      <ul>
+                        <li>Solved problems customers were experiencing with Bell South DSL.</li>
+                        <li>Used both phone and internet communication tools to resolve issues.</li>
+                      </ul>
+                    </ul>
+          </ul>
+        </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="js/projectDetail.js"></script>
-  <script src="js/project.js"></script>
-  <script src="js/app.js"></script>
+    </main>
+    <footer class="site-footer">
+      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/projectDetail.js"></script>
+    <script src="js/project.js"></script>
+    <script src="js/app.js"></script>
 
   </body>
 </html>

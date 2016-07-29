@@ -6,7 +6,20 @@
 }
 html {}
 
+h1 {
+  font-size: 2.2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
 body {
+  font-family: 'Lora', serif;
   line-height: 1.5;
   font-size: 100%;
   color: #313131;
@@ -24,6 +37,12 @@ footer {
   height: 3em;
   text-align: center;
   margin: 0 auto;
+}
+
+/*  HEADER STYLING
+======================================================= */
+hgroup {
+  line-height: 1.5em;
 }
 
 /*  TEXT STYLING
