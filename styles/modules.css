@@ -71,28 +71,38 @@ text-decoration: none;
 /*  MEDIA QUERY TO DISPLAY BIGGER SCREEN (NO HAMBURGER)
 ======================================================== */
 /* MEDIA QUERIES FOR MULTIPLE DEVICES */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) { /* Mobile*/
+@media only screen and (min-device-width : 318px) and (max-device-width : 482px) { /* Mobile*/
   .main-nav ul {
     display:none;
 
   }
   .header-navi img {
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
   }
 }
-@media only screen and (min-device-width:481px) and (max-device-width:768px) {      /* Tablet */
+@media only screen and (min-device-width:484px) and (max-device-width :638px) {      /* Tablet */
   .main-nav ul {
     display: none;
     /*padding: .1em .1em .1em 2em;*/
     width: 80%;
   }
-  /*.header-navi img {
-    width: 40%;
-    height: 40%;
-  }*/
+  .header-navi img {
+    width: 22%;
+    height: 22%;
+  }
 }
-@media only screen and (min-device-width:769px) and (max-device-width:1224px) {} /* Desktop */
+@media only screen and (min-device-width:640px) and (max-device-width:1226px) {
+  .main-nav ul {
+    icon-menu {
+      display:none;
+    }
+  }
+  .header-navi img {
+    width: 25%;
+    height: 25%;
+   }
+  } /* Desktop */
 @media only screen and (min-width:680px) {    /* Bigger than 680 then Hide Menu */
   .icon-menu {
     display:none;

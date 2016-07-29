@@ -69,10 +69,17 @@ projectView.toggleNavDisplay = function() {
 
 projectView.setTeasers = function() {
   $('.project-body *:nth-of-type(n+2)').hide(); // Hide elements beyond the first 2 in any artcile body.
+  $('a.read-less').hide();
 
   $('#projects').on('click', 'a.read-on', function(e) {
     e.preventDefault();
     $(this).parent().find('*').fadeIn();
+    $(this).hide();
+  });
+  $('#projects').on('click', 'a.read-less', function(e) {
+    e.preventDefault();
+    $('.project-body *:nth-of-type(n+2)').fadeOut('fast');
+    $('a.read-on').show();
     $(this).hide();
   });
 };
