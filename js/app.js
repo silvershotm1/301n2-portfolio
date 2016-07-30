@@ -55,15 +55,16 @@ projectView.handleMainNav = function() {
 };
 
 projectView.toggleNavDisplay = function() {
-
-  var $counter = 0;
   $('.icon-menu').on('click',function() {
-    if ($counter % 2 === 0) {
+    $('.main-nav ul').toggle('slow');
+
+  });
+  $(window).on('resize', function() {
+    if ($(window).width() >= 680) {
       $('.main-nav ul').show();
     } else {
       $('.main-nav ul').hide();
     }
-    $counter ++;
   });
 };
 
@@ -75,12 +76,13 @@ projectView.setTeasers = function() {
     e.preventDefault();
     $(this).parent().find('*').fadeIn();
     $(this).hide();
+    $('a.read-on').hide();                      // Hides all "More" when indiv article selected
   });
   $('#projects').on('click', 'a.read-less', function(e) {
     e.preventDefault();
     $('.project-body *:nth-of-type(n+2)').fadeOut('fast');
-    $('a.read-on').show();
     $(this).hide();
+    $('a.read-on').show();
   });
 };
 

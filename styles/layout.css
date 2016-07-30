@@ -46,9 +46,21 @@ ul + li {
   max-width: 80%;
   color: #282E30;
 }
+.heading-image {
+  padding: 1em 2em 0em .2em;
+  min-width: 20%;
+
+}
+#me-img {
+  border: .4em solid #FFEAAA;
+  border-style: inset;
+  min-width: 100%;
+  margin: 0 auto;
+
+}
 .header-navi {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 #filters select {
