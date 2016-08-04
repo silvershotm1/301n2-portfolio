@@ -85,7 +85,11 @@ projectView.setTeasers = function() {
     $('a.read-on').show();
   });
 };
-
+projectView.startIndexPage = function() {
+  Project.all.forEach(function(a) {
+    $('#projects').append(a.toHtml());
+  });
+};
 $(document).ready(function() {
   projectView.populateFilters();
   projectView.handleCategoryFilter();
