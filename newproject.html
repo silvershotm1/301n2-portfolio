@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+    <link rel="stylesheet" href="vendor/style/normalize.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <!-- <link rel="stylesheet" href="vendor/styles/railscasts.css"> -->
+
+    <script id="project-template" type="text/x-handlebars-template">
+      <article data-author="{{author}}" data-category="{{category}}" class="clearfix">
+        <header>
+          <h3>{{title}}</h3>
+          <div class="byline">
+            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            {{publishStatus}}
+          </div>
+        </header>
+        <section class="project-body">{{{body}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
+      </article>
+    </script>
+    </head>
+  <body>
+    <header class="site-header clearfix">
+      <section class="heading-group-h1 pull-left">
+        <h2>
+          Bishop's Blog!
+        </h2>
+        <p>Welcome to the blog of Michael Bishop! Checkout some of my projects or Resume. The site is currently being built and improved on almost a daily basis. You can always check out my LinkdIn profile to pass the time.</p>
+      </section>
+      <nav class="main-nav">
+        <div class="icon-menu"></div>
+        <ul>
+          <li class="tab" data-content="write"><a href="#" class="icon-home"> Write</a></li>
+          <li class="tab" data-content="projects"><a href="#" class="icon-home"> Preview</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="clearfix">
+      <section id="write" class="tab-content">
+        <h1>New project</h1>
+        <form action="#" id="new-form">
+          <label>
+            <input type="text" id="project-title" placeholder="Project title" required>
+          </label>
+          <textarea id="project-body" rows="8" cols="40" required></textarea>
+          <label>
+            <input type="text" id="project-author" placeholder="Coder's Name" required>
+          </label>
+          <label>
+            <input type="text" id="project-coder-url" placeholder="Coder's URL" required>
+          </label>
+          <label>
+            <input type="text" id="project-category" placeholder="Category" required>
+          </label>
+          <label>
+            <input type="checkbox" id="project-published"> Published
+          </label>
+        </form>
+      </section>
+      <section id="projects" class="tab-content">
+
+      </section>
+      <section id="project-export">
+        <label id="export-field" for="project-json">
+          <input type="text" readonly id="project-json">
+          When finalized, copy the above JSON, and paste into blogArticles.js
+        </label>
+      </section>
+    </main>
+    <footer>
+      &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="vendor/scripts/marked.js"></script>
+    <script src="vendor/scripts/highlight.pack.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/project.js"></script>
+    <script>
+      projectView.startNewProjectPage();
+    </script>
+  </body>
+</html>
