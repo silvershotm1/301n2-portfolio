@@ -24,7 +24,9 @@ As this project continues, more features will be added. Thanks for stopping by!
 * User:
 
 ====================================================================================
-## References
+## References and Image Citations
 
 * Hofbraü Image(http://www.pintjockey.com)
 * Sierra Nevada Torpedo Image(http://www.micromatic.com)
+* Campfire Coffee Picture(http://www.codefellows.org) - Provided via Codefellows
+* HEX Bus for bus-mall(http://www.shophex.com)
