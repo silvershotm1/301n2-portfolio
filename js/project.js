@@ -12,7 +12,7 @@
   Project.all = [];  // Add variable inside constructor
   Project.prototype.toHtml = function() {
 
-    var source = $('#article-template').html();
+    var source = $('#project-template').html();
     var template = Handlebars.compile(source);
 
 
