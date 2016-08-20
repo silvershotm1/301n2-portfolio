@@ -3,7 +3,7 @@
     "title": "About Me",
     "category": "HTML",
     "coder": "Michael Bishop",
-    "authorUrl": "https:\/\/silvershotm1.github.com\/about-me\/",
+    "coderUrl": "https:\/\/silvershotm1.github.com\/about-me\/",
     "publishedOn": "2016-05-12",
     "body": "<p>This is my first project as an about me webpage to introduce myself and show some of the skills I have acquired with minimal knowledge of HTML.<\/p><p>It includes features such as a pop-up message window quiz to guess facts about myself. Also includes my resume and a Top 10 TV Show area.<\/p><p>There is an additional layer of CSS control that cycles through a<img src=\"imgs\/me3.jpg\" class=\"pull-left\"> set of 3 images at the bottom left of the page where there is contact info included as well.<p><\/p><p>Go ahead and checkout the project!<\/p>"
   },
@@ -29,6 +29,14 @@
     "coder": "Michael Bishop",
     "coderUrl": "https:\/\/github.com\/silvershotm1\/campfire-coffee\/",
     "publishedOn": "2016-05-17",
-    "body": "<p>Vanilla javascript was used to render elements to the DOM. It is still in the stages of completion at this moment. <\/p><p>The purpose of the program is that you have a chain of coffee shops and you want to setup kiosks in various locations. <p>This program allows you to add in items such as amount of coffee sold as well as the amount of staffing hours from baristas that would be needed <img src=\"imgs\/campfire-coffee.jpg\" class=\"pull-right\"><\/p><p>You them are able to add the kiosk into a list of existing kiosks and be able to add and re-render the complete totals with the new object added.<\/p><p>Go ahead and checkout the project!<\/p>"
+    "body": "<p>Vanilla javascript was used to render elements to the DOM. It is still in the stages of completion at this moment. <\/p><p>The purpose of the program is that you have a chain of coffee shops and you want to setup kiosks in various locations. <\/p><p>This program allows you to add in items such as amount of coffee sold as well as the amount of staffing hours from baristas that would be needed <img src=\"imgs\/campfire-coffee.jpg\" class=\"pull-right\"><\/p><p>You them are able to add the kiosk into a list of existing kiosks and be able to add and re-render the complete totals with the new object added.<\/p><p>Go ahead and checkout the project!<\/p>"
+  },
+  {
+    "title": "Chocolate Pizza",
+    "category": "CSS",
+    "coder": "Michael Bishop",
+    "coderUrl": "https:\/\/github.com\/silvershotm1\/chocolate-pizza\/",
+    "publishedOn": "2016-05-20",
+    "body": "<p>This project went in and took a recipe from the internet and built the page using CSS.<\/p><p>This project was to really learn about CSS and how it can be used to manipulate the View.<\/p><p>The items are rendered on the page in a note-pad style way <img src=\"imgs\/choco-pizza.png\" class=\"pull-right\"><\/p><p>The overall project was great in learning how CSS works and the power it has to reshape a page.<\/p><p>Go ahead and checkout the project!<\/p>"
   }
 ]

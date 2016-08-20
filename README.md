@@ -30,3 +30,4 @@ As this project continues, more features will be added. Thanks for stopping by!
 * Sierra Nevada Torpedo Image(http://www.micromatic.com)
 * Campfire Coffee Picture(http://www.codefellows.org) - Provided via Codefellows
 * HEX Bus for bus-mall(http://www.shophex.com)
+* Chocolate Pizza(http://185.56.84.20/chocolate-pizza/)

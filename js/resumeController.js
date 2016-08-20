@@ -2,7 +2,7 @@
   var resumeController = {};
 
   resumeController.index = function() {
-    $('tab-content').hide();
+    $('.tab-content').hide();
     $('#resume').fadeIn('slow');
   };
 

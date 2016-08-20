@@ -2,9 +2,9 @@
   var blogController = {};
 
   blogController.index = function() {
-    $('tab-content').hide();
+    $('.tab-content').hide();
     $('#blog').fadeIn('slow');
   };
 
-  module.blogController = blogController; 
+  module.blogController = blogController;
 })(window);

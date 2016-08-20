@@ -96,7 +96,7 @@
     projectView.populateFilters();
     projectView.handleCategoryFilter();
     projectView.handleCoderFilter();
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
     projectView.toggleNavDisplay();
     projectView.setTeasers();
   };
@@ -117,8 +117,8 @@
 
     project = new Project({
       title: $('#project-title').val(),
-      author: $('#project-coder').val(),
-      authorUrl: $('#project-coder-url').val(),
+      coder: $('#project-coder').val(),
+      coderUrl: $('#project-coder-url').val(),
       category: $('#project-category').val(),
       body: $('#project-body').val(),
       publishedOn: $('#project-published:checked').length ? util.today() : null
