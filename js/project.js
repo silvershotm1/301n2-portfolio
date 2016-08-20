@@ -12,7 +12,7 @@
   Project.all = [];  // Add variable inside constructor
   Project.prototype.toHtml = function() {
 
-    var source = $('#article-template').html();
+    var source = $('#project-template').html();
     var template = Handlebars.compile(source);
 
 
@@ -35,12 +35,13 @@
     });
   };
   Project.fetchAll = function(callback) {  // Named Function
-    console.log('Hello World!');
     if (localStorage.projectData) {
       Project.loadAll(JSON.parse(localStorage.projectData));
       // projectView.startIndexPage();
       callback();
+      console.log('You have local storage!');
     } else {
+      console.log('Getting Local Storage');
       $.getJSON('data/projectData.json', function(projectData) {
         Project.loadAll(projectData);
         localStorage.setItem('projectData', JSON.stringify(projectData));

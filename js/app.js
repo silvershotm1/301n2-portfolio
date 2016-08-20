@@ -46,14 +46,14 @@
     });
   };
 
-  projectView.handleMainNav = function() {
-    $('.main-nav').on('click', '.tab', function(e) {
-      $('.tab-content').hide();
-      $('#' + $(this).data('content')).fadeIn();
-    });
-
-    $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
-  };
+  // projectView.handleMainNav = function() {
+  //   $('.main-nav').on('click', '.tab', function(e) {
+  //     $('.tab-content').hide();
+  //     $('#' + $(this).data('content')).fadeIn();
+  //   });
+  //
+  //   $('.main-nav .tab:first').click(); // Let's now trigger a click on the first .tab element, to set up the page.
+  // };
 
   projectView.toggleNavDisplay = function() {
     $('.icon-menu').on('click',function() {
@@ -96,7 +96,7 @@
     projectView.populateFilters();
     projectView.handleCategoryFilter();
     projectView.handleCoderFilter();
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
     projectView.toggleNavDisplay();
     projectView.setTeasers();
   };
@@ -117,8 +117,8 @@
 
     project = new Project({
       title: $('#project-title').val(),
-      author: $('#project-coder').val(),
-      authorUrl: $('#project-coder-url').val(),
+      coder: $('#project-coder').val(),
+      coderUrl: $('#project-coder-url').val(),
       category: $('#project-category').val(),
       body: $('#project-body').val(),
       publishedOn: $('#project-published:checked').length ? util.today() : null

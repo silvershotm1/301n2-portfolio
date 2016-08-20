@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
 
-    <script id="article-template" type="text/x-handlebars-template">
-      <article data-category="{{category}}" data-coder="{{coder}}">
+    <script id="project-template" type="text/x-handlebars-template">
+      <article data-coder="{{coder}}" data-category="{{category}}">
         <h3>{{title}}</h3>
         <div class="byline">
           By <address><a href="{{coderURL}}">{{coder}}</a></address>
@@ -23,6 +23,7 @@
         <a href="#" class="read-on">More &rArr;</a>
         <a href="#" class="read-less">&lArr; Less</a>
       </article>
+    <br>
     <hr>
     </script>
   </head>
@@ -42,16 +43,16 @@
       <nav class="main-nav" id="display">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="projects"><a href="#" class="icon-home"> Home</a></li>
-          <li class="tab" data-content="blog"><a href="#" class="icon-address-book"> Blog</a></li>
-          <li class="tab" data-content="resume"><a href="#" class="icon-power"> Resume</a></li>
-          <li><a href="https://www.linkedin.com/in/michael-bishop-b72b64111" target="_blank" class="icon-link"> LinkedIN</a></li>
-          <li><a href="http://github.com/silvershotm1" target="_blank" class="icon-github"> GitHub</a></li>
+          <li class="tab" data-content="projects"><a href="/" class="icon-home"> Home</a></li>
+          <li class="tab" data-content="blog"><a href="/blog" class="icon-address-book"> Blog</a></li>
+          <li class="tab" data-content="resume"><a href="/resume" class="icon-power"> Resume</a></li>
+          <li><a href="https://www.linkedin.com/in/michael-bishop-b72b64111" class="icon-link"> LinkedIN</a></li>
+          <li><a href="http://github.com/silvershotm1" class="icon-github"> GitHub</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <button id="purgeLS">Purge Local Storage</button>
+      <!-- <button id="purgeLS">Purge Local Storage</button> -->
       <section id="projects" class="tab-content">
         <div>
           <ul id="filters">
@@ -178,15 +179,26 @@
       &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+    <script src="vendor/scripts/jquery-2.1.4.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.min.js" charset="utf-8"></script> -->
+    <script src="vendor/scripts/handlebars.js"></script>
     <script src="vendor/scripts/marked.js"></script>
+    <script src="vendor/scripts/highlight.pack.js"></script>
+    <script src="vendor/scripts/html5sql.js"></script>
+    <script src="js/webdb.js"></script>
+
     <!-- <script src="js/projectDetail.js"></script>    CONVERTED to JSON FILE-->
     <script src="js/project.js"></script>
     <script src="js/app.js"></script>
-    <script>
+    <script type="text/javascript" src="js/blogController.js"></script>
+    <script type="text/javascript" src="js/resumeController.js"></script>
+    <script type="text/javascript" src="js/projectController.js"></script>
+    <script type="text/javascript" src="vendor/scripts/page.js"></script>
+    <script type="text/javascript" src="js/routes.js"></script>
+    <!-- <script>
       Project.fetchAll(projectView.startIndexPage);
-    </script>
+    </script> -->
 
   </body>
 </html>
