@@ -83,6 +83,36 @@ img {
 /* FORM STYLES
 ======================================================== */
 
-form input {
+input {
   display: block;
+  margin: .5em 0;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
 }
+
+input#project-json {
+  width: 100%;
+  margin: .5em 0;
+  border: 1px solid #ccc;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+  background-color: grey;
+}
+
+textarea {
+  /*width: 100%;*/
+  margin: .5em 0;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+/*/-----------------------------------------------/*A LAYER OF VALIDATION*/*/
+
+/*input:invalid, textarea:invalid {
+  border-color: red;
+}
+
+input:valid, textarea:valid {
+  border-color: green;
+}*/
