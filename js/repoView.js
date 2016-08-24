@@ -3,16 +3,16 @@
   var repoView = {};
 
   var ui = function() {
-    var $about = $('#about');
-    $about.find('ul').empty();
-    $about.show().siblings().hide();
+    var $blog = $('#blog');
+    $blog.find('ul').empty();
+    $blog.show().siblings().hide();
   };
 
   var render = Handlebars.compile($('#repo-template').html());
 
   repoView.index = function() {
     ui();
-    $('#about ul').append(
+    $('#blog ul').append(
       repos.with('name').map(render)
     );
   };

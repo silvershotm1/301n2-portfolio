@@ -3,8 +3,11 @@
 
   blogController.index = function() {
     $('.tab-content').hide();
-    $('#blog').fadeIn('slow');
+    console.log('hello')
+    $('#blog').show().siblings().hide();
   };
+
+  repos.requestRepos(repoView.index);
 
   module.blogController = blogController;
 })(window);
