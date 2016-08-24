@@ -103,7 +103,7 @@
 
 
   projectView.startNewProjectPage = function() {
-    $('tab-content').show();
+    $('.tab-content').show();
     $('#export-field').hide();
     $('#project-json').on('focus', function() {
       this.select();
@@ -131,8 +131,8 @@
     });
 
     // GETS INFO JSON READY
-    $('export-field').show();
-    $('project-json').val(JSON.stringify(project) + ',');
+    $('#export-field').show();
+    $('#project-json').val(JSON.stringify(project) + ',');
   };
 
   projectView.startAdminPage = function() {

@@ -15,7 +15,7 @@
       <article data-coder="{{coder}}" data-category="{{category}}">
         <h3>{{title}}</h3>
         <div class="byline">
-          By <address><a href="{{coderURL}}">{{coder}}</a></address>
+          By <address><a href="{{coderUrl}}">{{coder}}</a></address>
           <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
         </div>
       </div>
@@ -25,6 +25,18 @@
       </article>
     <br>
     <hr>
+    </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <li>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <p>Description: {{description}}</p>
+        <p>Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last updated: {{updated_at}}</p>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </li>
     </script>
   </head>
   <body>
@@ -73,12 +85,16 @@
         <h2>Michael Bishop</h2>
         <h4>Javascript Full-Stack Web Developer</h4>
         <section>
-          <h4>Some of my Interests:</h4>
-            <ul>
+          <h3>Some of my Interests:</h3>
+            <ol>
               <li>Coding</li>
               <li>Working on my Car</li>
               <li>Building Computers</li>
               <li>Hanging with my Family</li>
+            </ol>
+          <h2>Checkout my Github repos!</h2>
+            <ul>
+              <li></li>
             </ul>
             <h3>Contact Info</h3>
               <strong>Michael-Ryan Bishop </br>
@@ -175,7 +191,7 @@
           </ul>
         </div>
     </main>
-    <footer class="site -footer">
+    <footer class="site-footer">
       &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
 
@@ -187,15 +203,18 @@
     <script src="vendor/scripts/highlight.pack.js"></script>
     <script src="vendor/scripts/html5sql.js"></script>
     <script src="js/webdb.js"></script>
+    <script type="text/javascript" src="vendor/scripts/page.js"></script>
 
-    <!-- <script src="js/projectDetail.js"></script>    CONVERTED to JSON FILE-->
+    <script src="js/githubToken.js"></script>
     <script src="js/project.js"></script>
     <script src="js/app.js"></script>
-    <script type="text/javascript" src="js/blogController.js"></script>
-    <script type="text/javascript" src="js/resumeController.js"></script>
-    <script type="text/javascript" src="js/projectController.js"></script>
-    <script type="text/javascript" src="vendor/scripts/page.js"></script>
-    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="js/projectController.js"></script>
+
+    <script src="js/blogController.js"></script>
+    <script src="js/resumeController.js"></script>
+    <script src="js/repoView.js"></script>
+    <script src="js/repo.js"></script>
+    <script src="js/routes.js"></script>
     <!-- <script>
       Project.fetchAll(projectView.startIndexPage);
     </script> -->

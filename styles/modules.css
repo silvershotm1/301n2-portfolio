@@ -68,6 +68,12 @@ font-weight: bold;
 text-decoration: none;
 }
 
+#project-export label {
+  font-size: .8em;
+  font-style: italic;
+  color: ;
+}
+
 /*  MEDIA QUERY TO DISPLAY BIGGER SCREEN (NO HAMBURGER)
 ======================================================== */
 /* MEDIA QUERIES FOR MULTIPLE DEVICES */

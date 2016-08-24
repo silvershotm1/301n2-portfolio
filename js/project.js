@@ -4,7 +4,7 @@
 
     this.title = opts.title;
     this.coder = opts.coder;
-    this.coderURL = opts.coderURL;
+    this.coderUrl = opts.coderUrl;
     this.category = opts.category;
     this.body = opts.body;
     this.publishedOn = opts.publishedOn;
@@ -86,6 +86,15 @@
         })
       };
     });
+  };
+
+// Statistics of the projects
+  Project.stats = function() {
+    return {
+      numProjects: Project.all.length,
+      numWords: Project.numwords(),
+      Coders: Project.allCoders(),
+    };
   };
 
   module.Project = Project;
