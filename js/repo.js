@@ -7,9 +7,6 @@
     $.ajax({
       url: 'github/users/silvershotm1/repos?sort=updated&per_page=10',
       type: 'GET',
-      headers: {
-        Authorization: 'token ' + githubToken
-      }
     }).success(function (data) {
       console.log('loading!');
       repos.all = data;
