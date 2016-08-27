@@ -5,14 +5,14 @@
 
   repos.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/user/repos?sort=updated&per_page=10',
+      url: 'github/users/silvershotm1/repos?sort=updated&per_page=10',
       type: 'GET',
       headers: {
         Authorization: 'token ' + githubToken
       }
     }).success(function (data) {
       console.log('loading!');
-      repos.all = data.map(function (obj) { return obj; });
+      repos.all = data;
       repos.all = repos.without('fork');
     }).error(function(x, text, error) {
       console.log(error);
