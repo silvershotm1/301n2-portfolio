@@ -16,6 +16,7 @@
     $('#blog ul').append(
 
       repos.with('name').map(render)
+
     );
   };
 

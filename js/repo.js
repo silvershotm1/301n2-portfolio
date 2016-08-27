@@ -12,7 +12,7 @@
       }
     }).success(function (data) {
       console.log('loading!');
-      repos.all = data.map(function (obj) { return obj; });
+      repos.all = data;
       repos.all = repos.without('fork');
     }).error(function(x, text, error) {
       console.log(error);
