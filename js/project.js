@@ -27,29 +27,47 @@
     projectData.sort(function(a,b) {
       return (new Date(b.publishedOn)) - (new Date(a.publishedOn));
     });
-
-  // projectData.forEach(function(ele) {
-  //   Project.all.push(new Project(ele));
     Project.all = projectData.map(function(ele) { // refactor forEach code
       return new Project(ele);
     });
   };
-  Project.fetchAll = function(callback) {  // Named Function
-    if (localStorage.projectData) {
-      Project.loadAll(JSON.parse(localStorage.projectData));
+  Project.checkForProjectChange = function(callback) {
+    $.getJSON('/data/projectData.json', function(projectData, status, XHR) {
+      Project.loadAll(projectData);
+      localStorage.eTag = JSON.stringify(XHR.getResponseHeader('eTag'));
+      localStorage.projectData = JSON.stringify(projectData);
       // projectView.startIndexPage();
       callback();
-      console.log('You have local storage!');
-    } else {
-      console.log('Getting Local Storage');
-      $.getJSON('data/projectData.json', function(projectData) {
-        Project.loadAll(projectData);
-        localStorage.setItem('projectData', JSON.stringify(projectData));
-        // projectView.startIndexPage();
-        callback();
-      });
-    };
+    });
   };
+
+  Project.loadProjectStorage = function(callback) {
+    Project.loadAll(JSON.parse(localStorage.projectData));
+    // projectView.startIndexPage();
+    callback();
+  };
+
+  Project.fetchAll = function(callback) {
+    if (localStorage.projectData) {
+      $.ajax({
+        url: '/data/projectData.json',
+        type: 'head',
+        success: function(data, status, jqXHR) {
+          if (JSON.parse(localStorage.eTag) === jqXHR.getResponseHeader('eTag')) {
+            Project.loadProjectStorage(callback);
+            console.log('localStorage Loaded');
+          } else {
+            Project.checkForProjectChange(callback);
+            console.log('localStorage Updated');
+          }
+        }
+      });
+    } else {
+      console.log('localStorage Retreived');
+      Project.checkForProjectChange(callback);
+    }
+  };
+
   // Counts number of words in a Project
   Project.numWordsAll = function() {
     return Project.all.map(function(project) {
