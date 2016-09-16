@@ -99,14 +99,14 @@ text-decoration: none;
   }
 }
 @media only screen and (min-device-width:640px) and (max-device-width:1226px) {
-  .main-nav ul {
-    icon-menu {
+
+    .icon-menu {
       display:none;
     }
-  }
+
   .header-navi img {
-    width: 25%;
-    height: 25%;
+    width: 30%;
+    height: 30%;
    }
   } /* Desktop */
 @media only screen and (min-width:680px) {    /* Bigger than 680 then Hide Menu */
@@ -128,4 +128,7 @@ text-decoration: none;
    }
    #display {
      display: block;
+     text-align: center;
+     font-size: .75em;
+
 }

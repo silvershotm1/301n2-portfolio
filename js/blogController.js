@@ -2,11 +2,10 @@
   var blogController = {};
 
   blogController.index = function() {
+    $('.tab-content').hide();
+    $('#blog').fadeIn('slow');
 
-    $('#blog').show().siblings().hide();
-
-    repos.requestRepos(repoView.index);
-
+    // repos.reqRepos(repoView.index);
   };
 
   module.blogController = blogController;
