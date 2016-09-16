@@ -28,6 +28,7 @@
     </script>
     <script id="repo-template" type="text/x-handlebars-template">
       <li>
+        
         <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
         <!-- <p>Source: {{source}} -->
         <p>Description: {{description}}</p>
@@ -61,7 +62,7 @@
           <li class="tab" data-content="blog"><a href="/blog" class="icon-address-book"> Blog</a></li>
           <li class="tab" data-content="resume"><a href="/resume" class="icon-power"> Resume</a></li>
           <li><a href="https://www.linkedin.com/in/michael-bishop-b72b64111" class="icon-link"> LinkedIN</a></li>
-          <li><a href="http://github.com/silvershotm1" class="icon-github"> GitHub</a></li>
+          <li class="tab" data-content="github"><a href="/github" class="icon-github"> GitHub</a></li>
         </ul>
       </nav>
     </header>
@@ -94,10 +95,7 @@
               <li>Building Computers</li>
               <li>Hanging with my Family</li>
             </ol>
-          <h2>Checkout my Github repos!</h2>
-            <ul>
-              <li></li>
-            </ul>
+
             <h3>Contact Info</h3>
               <strong>Michael-Ryan Bishop </br>
                 Email:<a href=mailto:bishop.michaelr@gmail.com> Email me</a></br>
@@ -192,6 +190,12 @@
                   </ul>
           </ul>
         </div>
+        <section id="github" class="tab-content">
+          <h2>Checkout my Github repos!</h2>
+            <ul>
+              <li>Project:</li>
+            </ul>
+        </section>
     </main>
     <footer class="site-footer">
       &copy; 2015 Code Fellows | Static Blog | Happy Ipsum!
@@ -213,6 +217,7 @@
 
     <script src="js/resumeController.js"></script>
     <script src="js/blogController.js"></script>
+    <script src="js/githubController.js"></script>
     <script src="js/repoView.js"></script>
     <script src="js/repo.js"></script>
     <script src="js/routes.js"></script>

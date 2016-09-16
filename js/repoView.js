@@ -2,10 +2,10 @@
   var repoView = {};
 
   var ui = function() {
-    var $blog = $('#blog'); // Best practice: Cache the DOM query if it's used more than once.
+    var $github = $('#github'); // Best practice: Cache the DOM query if it's used more than once.
 
-    $blog.find('ul').empty();
-    $blog.show().siblings().hide();
+    $github.find('ul').empty();
+    $github.show().siblings().hide();
   };
 
   var render = Handlebars.compile($('#repo-template').html());
@@ -13,7 +13,7 @@
   repoView.index = function() {
     ui();
 
-    $('#blog ul').append(
+    $('#github ul').append(
 
       repos.with('name').map(render)
 
